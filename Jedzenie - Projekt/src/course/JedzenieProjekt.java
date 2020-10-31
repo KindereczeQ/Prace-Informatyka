@@ -3,100 +3,71 @@ package course;
 public class JedzenieProjekt {
 
 	public static void main(String[] args) {
-		int Proszek = 100;
-		int Szampon = 250;          
-		int Mydlo = 200;            
-		boolean Holidays = true;
-		int WymaganyProszek = 100;
-		int WymaganySzampon = 500;
-		int WymaganeMydlo = 400;
+		int PozadanyProszek = 600;
+		int PozadaneMydlo = 400;
+		int PozadanySzampon = 200;
 		
 		
+		int DeficytSzampon = 400;
+		int DeficytMydlo = 300;
+		int DeficytProszek = 700;
 		
-		if ( WymaganyProszek <= Proszek && Holidays )
-		{
-			System.out.println("Masz wystarczaj¹c¹ iloœæ proszku.");
-		}
-		
-		else if ( WymaganyProszek <= Proszek && Holidays == false )
-		{
-			System.out.println("Masz wystarczaj¹c¹ iloœæ prszku.");
-		}
-		
-		else if ( WymaganyProszek > Proszek && Holidays == false )
-			
-		
-		{
-			int DokupProszek = WymaganyProszek - Proszek;
-				System.out.println("Musisz dokupiæ nastêpuj¹c¹ liczbê "
-					+ "gramów proszku:");
-				System.out.println("-" + " " + DokupProszek);
-		}
-		
-		
-		if ( Holidays && WymaganySzampon  > Szampon /2 )
-		{
-			int DokupSzampon = (WymaganySzampon /2)  - Szampon;
-			System.out.println("Musisz dokupiæ nastêpuj¹c¹ liczbê "
-					+ "mililitrów szamponu:");
-			System.out.println("-" +  " " + DokupSzampon);
-		}
-		
-		else if ( WymaganySzampon <= Szampon && Holidays == false)
-		{
-			System.out.println("Masz wystarczaj¹c¹ iloœæ szamponu.");
-		}
-	
-		else if ( WymaganySzampon <= Szampon && Holidays )
-		{
-			System.out.println("Masz wystarczaj¹c¹ iloœæ szamponu.");
-		}
-		else if ( WymaganySzampon > Szampon && Holidays == false  )
-		{
-			int DokupSzampon = 	WymaganySzampon - Szampon;
-				System.out.println("Musisz dokupiæ nastêpuj¹c¹ liczbê "
-					+ "mililitrów szamponu:");
-				System.out.println("-" + " " +
-					DokupSzampon);
-		}
+		boolean holidays = false;
 		 
-		 if ( Holidays && WymaganeMydlo > Mydlo ) 
+		
+		if ( PozadanyProszek  >= DeficytProszek )
 		{
-			
-			int DokupMydlo = 	(WymaganeMydlo /2) - Mydlo;
-			System.out.println("Musisz dokupiæ nastêpuj¹c¹ liczbê "
-				+ "mililitrów myd³a:");
-			System.out.println("-" + " " +
-				DokupMydlo);
+			int AktualnyProszek = PozadanyProszek  - DeficytProszek ;
+			System.out.println("Aktualnie posiadasz" + " " + AktualnyProszek + " " + "gramów proszku.");
+		}
+		else
+		{
+			int AktualnyProszek = PozadanyProszek  - DeficytProszek ;
+			System.out.println("Aktualnie posiadasz" + " " + AktualnyProszek + " " + "gramów proszku.");
 		}
 		
-		else if ( WymaganeMydlo < Mydlo && Holidays && WymaganeMydlo - Mydlo == 0 )
-		
+				if ( PozadaneMydlo >= DeficytMydlo && holidays )
 		{
-			System.out.println("Masz wystarczaj¹c¹ iloœæ myd³a.");
+			int AktualneMydloHol = PozadaneMydlo /2   - DeficytMydlo ;
+			System.out.println("Aktualnie posiadasz" + " " + AktualneMydloHol + " " + "mililitrów myd³a.");
+		}
+		else    
+		{
+			int AktualneMydlo = PozadaneMydlo - DeficytMydlo;
+			System.out.println("Aktualnie posiadasz" + " " + AktualneMydlo + " " + "mililitrów myd³a.");
 		}
 		
-		else if ( WymaganeMydlo < Mydlo && Holidays == false && WymaganeMydlo - Mydlo == 0 )
+	
+		if ( PozadanySzampon >= DeficytSzampon && holidays )
 		{
-			System.out.println("Masz wystarczaj¹c¹ iloœæ myd³a.");
+			int AktualnySzamponHol = PozadanySzampon /2  - DeficytSzampon;
+			System.out.println("Aktualnie posiadasz" + " " + AktualnySzamponHol + " " + "mililitrów szamponu.");
 		}
-			  
-		else if ( WymaganeMydlo > Mydlo && Holidays == false  )
+		else
 		{
-			int DokupMydlo = 	WymaganeMydlo - Mydlo;
-				System.out.println("Musisz dokupiæ nastêpuj¹c¹ liczbê "
-					+ "mililitrów myd³a:");
-				System.out.println("-" + " " +
-					DokupMydlo);
+			int AktualnySzampon = PozadanySzampon - DeficytSzampon;
+			System.out.println("Aktualnie posiadasz" + " " + AktualnySzampon + " " + "mililitrów szamponu.");
 		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				
+		
 	
 		
 		
 			
 			
-		{
+	
 			
-		}
+		
 
 	}
 
