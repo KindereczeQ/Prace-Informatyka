@@ -1,7 +1,7 @@
 
 import java.util.Scanner;
 
-public class PKB {
+public class PKBPoprawiony {
 	public static void showEverything(int[] pkb) {
 		for (int i = 9; i < pkb.length && i != -1; i--) {
 
